@@ -1,0 +1,5 @@
+torch
+regex
+requests
+sacremoses
+fastBPE
