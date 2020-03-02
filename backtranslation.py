@@ -15,6 +15,6 @@ de2en = torch.hub.load('pytorch/fairseq',
                        tokenizer='moses',
                        bpe='fastbpe')
 
-paraphrase = de2en.translate(en2de.translate('PyTorch Hub is an awesome interface!'))
+paraphrase = de2en.translate(en2de.translate('This is an awesome approach to the problem.'))
 
 print(paraphrase)

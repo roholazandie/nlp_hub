@@ -1,8 +1,11 @@
 import torch
 import os
 import time
+from config import NLPHubConfig
 
-os.environ["TORCH_HOME"] = "/media/rohola/data/torch_home"
+config = NLPHubConfig.from_json_file("config.json")
+os.environ["TORCH_HOME"] = config.torch_home
+
 
 # Download RoBERTa already finetuned for MNLI
 roberta = torch.hub.load('pytorch/fairseq', 'roberta.large.mnli')
@@ -11,12 +14,12 @@ roberta.eval()  # disable dropout for evaluation
 with torch.no_grad():
     t1 = time.time()
     # Encode a pair of sentences and make a prediction
-    tokens = roberta.encode('Roberta is a heavily optimized version of BERT.', 'Roberta is not very optimized.')
+    tokens = roberta.encode('Kate is so pissed about his reaction.', 'Kate is pleased by his reaction.')
     prediction = roberta.predict('mnli', tokens).argmax().item()
     assert prediction == 0  # contradiction
 
     # Encode another pair of sentences
-    tokens = roberta.encode('Roberta is a heavily optimized version of BERT.', 'Roberta is based on BERT.')
+    tokens = roberta.encode('He finished his college.', 'He has a degree.')
     prediction = roberta.predict('mnli', tokens).argmax().item()
     assert prediction == 2  # entailment
 

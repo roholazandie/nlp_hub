@@ -3,3 +3,4 @@ regex
 requests
 sacremoses
 fastBPE
+subword-nmt
