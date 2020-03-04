@@ -10,3 +10,7 @@ pip install -r requirements.txt
 Add the torch hub home in the config.json. If you leave it empty then we choose `/home/usrname/.cache/torch` for you.
 
 WARNING: This is a hub, so it takes at least a few gigabytes of the disk space. Choose a free partition of your disk to hub home.
+
+
+## Todos
+Add Intent classification using bert(from transformer)
