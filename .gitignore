@@ -160,3 +160,5 @@ caches/*
 wandb/*
 
 *.html
+
+model_dir

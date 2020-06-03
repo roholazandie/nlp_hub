@@ -4,3 +4,11 @@ requests
 sacremoses
 fastBPE
 subword-nmt
+nlpaug
+numpy
+matplotlib
+python-dotenv
+transformers
+torch
+requests
+nltk

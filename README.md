@@ -13,4 +13,9 @@ WARNING: This is a hub, so it takes at least a few gigabytes of the disk space. 
 
 
 ## Todos
-Add Intent classification using bert(from transformer)
+- Add sentiment analysis
+- Add Intent classification using bert(from transformer)
+- Add question-answering conditioned on previous text
+- Add question-answering on wikipedia
+- Add textual similarity
+- Add summarization
